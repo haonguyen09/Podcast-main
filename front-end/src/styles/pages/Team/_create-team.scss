@@ -1,0 +1,63 @@
+@use '../../abstracts' as abs;
+
+.createTeam {
+    width: 558px;
+    &-heading {
+        @include abs.styleHeading();
+        margin-bottom: 40px;
+    }
+
+    &-name {
+        h4 {
+            @include abs.styleHeading($fz: 18px);
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 12px;
+            background-color: abs.$natural-1;
+            border:  none;
+            width: 100%;
+        }
+    }
+
+    &-members {
+
+        margin-bottom: 30px;
+
+        h4 {
+            @include abs.styleHeading($fz: 18px);
+            margin-block: 20px;
+        }
+    }
+
+    &-avatar-wrap {
+        border-radius: 12px;
+        padding: 20px;
+        background-color: abs.$gray-2;
+        
+    }
+
+    &-item {
+        background-color: abs.$white-color;
+        border-radius: 12px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    &-avatar {
+        
+        img {
+            @include abs.size(46px);
+            border-radius: 100rem;
+            margin-right: 10px;
+        }
+
+        h5 {
+            @include abs.styleHeading($fz: 14px, $fw: 500, $lh: 20px);
+        }
+    }
+
+
+}

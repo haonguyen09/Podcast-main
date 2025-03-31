@@ -1,0 +1,51 @@
+@use '../../abstracts' as abs;
+
+.playlistShow {
+    &-item {
+        padding: 20px 22px;
+        box-shadow: -1px -3px 14px 0px rgba(227, 230, 236, 0.20), -10px 24px 35px 0px rgba(227, 230, 236, 0.25);
+        border-radius: 10px;
+
+        img {
+            @include abs.size(213px, 245px);
+            flex-shrink: 0;
+            border-radius: 12px;
+            margin-right: 20px;
+        }
+    }
+
+    &-listPodcast {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 5px;
+        margin-block: 50px 20px;
+    }
+
+    &-itemPodcast {
+        padding: 4px 6px;
+        border-radius: 10px;
+        background-color: abs.$gray-3;
+
+        &-info {
+            img {
+                @include abs.size(22px);
+                flex-shrink: 0;
+                border-radius: 100rem;
+                margin-right: 5px;
+            }
+
+            h4 {
+                @include abs.fs(12px);
+                @include abs.fw(440);
+                line-height: 18px;
+                margin: 0;
+            }
+        }
+    }
+
+    &-width {
+        width: 700px;
+        & > div:first-child {
+            display: none;
+        }
+    }
+}

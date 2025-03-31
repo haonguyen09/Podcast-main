@@ -1,0 +1,91 @@
+@use '../../abstracts' as abs;
+
+.trending {
+
+    padding-top: 55px;
+    padding-bottom: 36px;
+    container-type: inline-size;
+    container-name: trending;
+
+    &-heading {
+        --mb: 11px;
+    }
+
+    &-banner {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: abs.$natural-1;
+        position: relative;
+    }
+
+    &-content {
+        flex: 0 0 310px;
+    }
+
+    &-title {
+        @include abs.fs(22px);
+        line-height: 1.45;
+        margin-bottom: 11px;
+
+        span {
+            background: abs.$gradient1;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+    }
+
+    &-podcast {
+        @include abs.fs('sm');
+        color: abs.$natural;
+        margin-bottom: 4px;
+    }
+
+    &-author {
+        @include abs.fs('sm');
+        color: abs.$primary-black;
+        margin-bottom: 20px;
+
+        span {
+            color: abs.$natural;
+        }
+    }
+
+    &-image {
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        max-width: 332px;
+    }
+
+    &-vector,
+    &-circle {
+        position: absolute;
+    }
+
+    &-vector {
+        right: 10%;
+        top: 20%;
+    }
+
+    &-circle {
+        right: 28%;
+        bottom: 0;
+    }
+
+
+    @container trending (max-width: 630px) {
+        &-image {
+            display: none;
+        }
+
+        &-content {
+            flex: 1;
+        }
+    }
+}
+
+
+.slick-list {
+    padding: 55px 0 0;
+}

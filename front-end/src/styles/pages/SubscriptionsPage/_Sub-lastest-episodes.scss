@@ -1,0 +1,39 @@
+@use '../../abstracts' as abs;
+
+.lastest-episodes {
+    container-type: inline-size;
+    container-name: lastestEpisodes;
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+        --mb: 22px;
+    }
+
+    &-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    &-item {
+        border: 1px solid abs.$natural-2;
+        border-radius: 10px;
+    }
+
+
+    @container lastestEpisodes (max-width: 768px) {
+        &-list {
+            grid-template-columns: 1fr;
+            gap: 22px;
+        }
+    }
+
+    @container feedMain (min-width: 450px) {
+        .feed-item-content {
+
+                flex-direction: row !important;
+            
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@use '../../abstracts' as abs;
+@forward './create-team';
+
+.team {
+
+    container-type: inline-size;
+    container-name: teamContainer;
+
+    &-header {
+        margin-bottom: 40px;
+    }
+
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+    }
+
+    &-main {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    &-item {
+        padding: 20px;
+        box-shadow: -1px -3px 14px 0px rgba(227, 230, 236, 0.20), -10px 24px 35px 0px rgba(227, 230, 236, 0.25);
+        border-radius: 10px;
+        cursor: pointer;
+        background: abs.$gray-e9;
+    }
+
+    &-member {
+        img {
+            @include abs.size(48px);
+            border-radius: 100rem;
+            border: 2px solid abs.$white-color;
+        }
+
+        img:not(:first-child) {
+            margin-left: -10px;
+        }
+    }
+
+    @container  teamContainer(max-width: 768px) {
+        .button-team {
+            span {
+                display: none;
+            }
+        }
+    }
+}

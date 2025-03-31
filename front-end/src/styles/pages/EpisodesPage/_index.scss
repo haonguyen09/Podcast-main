@@ -1,0 +1,46 @@
+@forward './create-episode';
+@use '../../abstracts' as abs;
+
+.episodes {
+
+    container-type: inline-size;
+    container-name: episodes;
+
+    &-header {
+        margin-bottom: 40px;
+    }
+
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+    }
+
+    &-img {
+        @include abs.size(72px);
+        flex-shrink: 0;
+        border-radius: 8px;
+
+    }
+
+    &-title {
+        @include abs.fs('lg');
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+    }
+
+    &-sub {
+        @include abs.styleText();
+    }
+    
+
+    @container  episodes(max-width: 768px) {
+        .button-episodes {
+            span {
+                display: none;
+            }
+        }
+    }
+}

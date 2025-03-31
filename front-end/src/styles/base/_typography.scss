@@ -1,0 +1,13 @@
+@use "../abstracts" as abs;
+
+body {
+    font-family: abs.$font-primary;
+    color: abs.$text-black1;
+    font-weight: 400;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include abs.fw('bold');
+}

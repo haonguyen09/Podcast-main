@@ -1,0 +1,118 @@
+@use '../../abstracts' as abs;
+
+.playlist {
+
+    container-type: inline-size;
+    container-name: playlist;
+
+    &-heading {
+        @include abs.fs(24px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 14px;
+    }
+
+    &-header {
+        span {
+            @include abs.styleText();
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+
+    &-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    &-item {
+        cursor: pointer;
+        padding: 14px 20px;
+        border-radius: 10px;
+        box-shadow: -1px -3px 14px 0px rgba(227, 230, 236, 0.20), -10px 24px 35px 0px rgba(227, 230, 236, 0.25);
+
+        img {
+            @include abs.size(130px);
+            flex-shrink: 0;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+    }
+
+    &-info {
+        &-header {
+            h3 {
+                @include abs.fs('lg');
+                @include abs.fw('medium');
+                color: abs.$text-black1;
+                line-height: 24px;
+            }
+
+            span {
+                @include abs.styleText()
+            }
+        }
+
+        p {
+            @include abs.styleText();
+            color: abs.$gray-1;
+            @include abs.fs(13px);
+        }
+    }
+
+    &-podcast {
+        img {
+            @include abs.size(47px);
+            border-radius: 100rem;
+            border: 2px solid abs.$white-color;
+            
+        }
+
+        img:not(:first-child) {
+            margin-left: -40px;
+        }
+
+        span {
+            @include abs.size(47px);
+            border-radius: 100rem;
+            border: 2px solid abs.$white-color;
+            background-color: abs.$natural-2;
+            display: flex;
+            padding: 12px 10px 13px 10px;
+            justify-content: center;
+            align-items: center;
+            width: 47px;
+            margin-left: -40px;
+        }
+    }
+    
+    @container playlist (max-width: 767px) {
+        &-list {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        &-info {
+            &-header {
+    
+                span {
+                    display: none;
+                }
+
+            }
+
+            p {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        &-likes {
+            display: none;
+        }
+    }
+}

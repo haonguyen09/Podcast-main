@@ -1,0 +1,54 @@
+@use '../../abstracts' as abs;
+
+.signUp {
+
+    &-s3 {
+
+        &-search {
+            width: 660px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: abs.$natural-2;
+            margin-bottom: 30px;
+            border: none;
+        }
+
+        &-list {
+            grid-template-columns: repeat(7, 65px);
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        &-item {
+            position: relative;
+            img {
+                @include abs.size(64px);
+                border-radius: 12px;
+            }
+
+            &-plus {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                z-index: 1;
+                
+            }
+            &-plus.active {
+                [fill='white'] {
+                    fill: abs.$primary-color;
+                }
+
+                [fill^='#130'] {
+                    fill: abs.$white-color;
+                }
+            }
+
+        }
+
+        &-btn {
+            --p: 12px 14px;
+            min-width: 117px;
+        }
+
+    }
+}

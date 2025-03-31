@@ -1,0 +1,32 @@
+@use '../../abstracts' as abs;
+
+.topPodcast {
+
+    container-type: inline-size;
+    container-name: topPodcast;
+
+    &-header {
+        margin-bottom: 18px;
+    }
+
+
+    &-main {
+        grid-template-rows: minmax(0, 2);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+
+        img {
+            flex: 0 0 84px;
+            aspect-ratio: 1;
+            @include abs.imgRounded(10px)
+        }
+    }
+
+    @container topPodcast (max-width: 768px) {
+        &-main {
+            gap: 10px;
+        }
+    }
+
+
+}

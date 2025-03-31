@@ -1,0 +1,51 @@
+@use '../../abstracts' as abs;
+
+.yourSub {
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+        --mb: 12px;
+    }
+
+    &-header {
+        span {
+            @include abs.styleText();
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+
+    &-list {
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+
+    &-item {
+        padding: 14px;
+        box-shadow: -1px -3px 14px 0px rgba(227, 230, 236, 0.20), -10px 24px 35px 0px rgba(227, 230, 236, 0.25);
+        border-radius: 10px;
+        
+        img {
+            @include abs.size(130px);
+            flex-shrink: 0;
+            border-radius: 100rem;
+        }
+
+        h3 {
+            @include abs.styleText();
+            color: abs.$text-black1;
+            gap: 9px;
+            margin: 0;
+            display: inline-flex;
+        }
+
+
+        span {
+            @include abs.styleText();
+        }
+    }
+
+
+}

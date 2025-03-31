@@ -1,0 +1,41 @@
+
+//vendor
+@use "./vendor/react-bootstrap";
+@use "./vendor/react-slick";
+
+//base
+@use "./base/reset";
+@use "./base/general";
+@use "./base/typography";
+
+
+//components
+@use "./components/navbarComponent";
+@use './components/button';
+@use './components/toggle';
+@use './components/waveForm';
+@use './components/podcastItemComponent';
+
+//layout
+@use "./layout/header";
+@use "./layout/sidebar";
+@use "./layout/structure";
+@use "./layout/footer";
+
+//pages
+@use "./pages/HomePage";
+@use "./pages/TrendingPage";
+@use "./pages/ExploreTopicPage";
+@use "./pages/PlayListPage";
+@use "./pages/SubscriptionsPage";
+@use "./pages/EpisodesPage";
+@use "./pages/Team";
+@use "./pages/Subcribers";
+@use "./pages/LeaderboardPage";
+@use "./pages/SignUpPage";
+
+
+//themes
+
+//responsive
+@use "./base/responsive";

@@ -1,0 +1,53 @@
+@use '../../abstracts' as abs;
+
+.signUp {
+
+    &-s4 {
+
+        &-search {
+            width: 660px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: abs.$natural-2;
+            margin-bottom: 30px;
+            border: none;
+        }
+
+        &-list {
+            grid-template-columns: repeat(2, 300px);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        &-item {
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: abs.$white-color;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        &-author {
+            img {
+                @include abs.size(48px);
+                border-radius: 100rem;
+                flex-shrink: 0;
+                margin-right: 10px;
+            }
+        }
+
+        &-info {
+            h5 {
+                @include abs.styleHeading($fz: 15px, $fw: 500, $lh: 22px);
+            }
+
+            span {
+                @include abs.styleText();
+            }
+        }
+
+        &-btn {
+            --p: 12px 14px;
+            min-width: 117px;
+        }
+    }
+}

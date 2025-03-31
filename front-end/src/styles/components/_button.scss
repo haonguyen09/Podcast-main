@@ -1,0 +1,55 @@
+@use '../abstracts' as abs;
+
+.button {
+    --gap: 10px;
+    --fw: 600;
+    --p: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    border-radius: 8px;
+    font-weight: var(--fw);
+    padding: var(--p);
+    @include abs.fs('nm');
+    cursor: pointer;
+
+    &--primary {
+        color: abs.$gray-neutral1;
+        background-color: abs.$primary-color;
+    }
+
+    &--white {
+        color: abs.$text-black1;
+        background-color: abs.$white-color;
+    }
+
+    &--secondary {
+        color: abs.$primary-color;
+        background-color: abs.$gray-4;
+    }
+
+    &--orange {
+        color: abs.$orange-color1;
+        background-color: abs.$orange-color2;
+    }
+
+    &--orangebg {
+        background-color: abs.$orange-color1;
+        color: abs.$orange-color2;
+    }
+
+    &--pink {
+        color: abs.$pink-color2;
+        background-color: abs.$pink-color1;
+    }
+
+    &--blue {
+        color: abs.$white-color;
+        background-color: abs.$blue-color;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,14 @@
+@forward './popular-hosts';
+@forward './trending';
+@forward './feed';
+@forward './top-podcast';
+@forward './suggest-follow';
+@forward './listening-history';
+@forward './topics';
+@forward './current-playing';
+
+
+.home-wrapper {
+    grid-template-columns: minmax(0 , 2fr) minmax(0, 1fr);
+    gap: 60px;
+}

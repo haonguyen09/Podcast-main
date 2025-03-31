@@ -1,0 +1,96 @@
+@use '../../abstracts' as abs;
+
+.explore {
+
+    &-wrapper {
+        container-type: inline-size;
+        container-name: explore;
+    }
+
+    &-heading {
+        @include abs.fs(24px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 14px;
+    }
+
+    &-header {
+        span {
+            @include abs.styleText();
+            margin-bottom: 38px;
+            display: block;
+        }
+    }
+
+    &-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    &-item {
+        position: relative;
+        flex-shrink: 0;
+        @include abs.size(240px, 86px);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    &-img {
+        @include abs.imgRounded(10px)
+    }
+
+    &-info {
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        span {
+            @include abs.styleText();
+            color: abs.$white-color;
+        }
+    }
+
+    &-title {
+
+        img {
+            width: 10px;
+            aspect-ratio: 1;
+            flex-shrink: 0
+        }
+
+        h4{
+            @include abs.fs('sm');
+            @include abs.fw('semibold');
+            color: abs.$white-color;
+            line-height: 22px;
+            margin: 0;
+        }
+    }
+
+    @container explore (max-width: 767px) {
+        &-list {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        &-item {
+            width: 100% !important;
+        }
+    }
+
+    @container explore (min-width: 768px) and (max-width: 1023px) {
+        &-list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        &-item {
+            width: 100% !important;
+        }
+    }
+
+
+}

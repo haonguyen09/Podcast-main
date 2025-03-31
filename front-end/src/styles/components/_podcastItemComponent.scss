@@ -1,0 +1,43 @@
+@use '../abstracts' as abs;
+
+.podcastItem {
+
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 15px;
+    padding-right: 40px;
+
+    &-wave {
+        width: 100%; /* Set the width of the waveform */
+        height: 45px;
+
+        & > div:first-child {
+            display: none !important;
+        }
+    }
+
+    &-pause, &-play {
+        @include abs.size(46px);
+        margin-right: 10px;
+    } 
+
+    &-info {
+        h3 {
+            @include abs.fs('lg');
+            @include abs.fw('medium');
+            line-height: 24px;
+            color: abs.$text-black1;
+        }
+
+        &-sub {
+            & > * {
+                @include abs.styleText()
+            }
+
+            span:first-child {
+                margin-right: 16px;
+            }
+        }
+    }
+}
+

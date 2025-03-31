@@ -1,0 +1,25 @@
+@use '../../abstracts' as abs;
+
+.subscribers {
+
+    &-header {
+        margin-bottom: 40px;
+    }
+
+    &-heading {
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 24px;
+    }
+
+    &-img {
+        @include abs.size(38px);
+        border-radius: 100rem;
+        margin-right: 10px;
+    }
+
+    &-title {
+        @include abs.styleHeading($fz: 16px, $fw: 500, $lh: 24px);
+    }
+}

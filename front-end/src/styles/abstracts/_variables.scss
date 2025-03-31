@@ -1,0 +1,35 @@
+$font-primary: "IBM Plex Sán", sans-serif;
+$primary-color: hsl(248, 57%, 60%);
+$secondary-color: hsl(248, 56%, 92%);
+$primary-black: hsl(240, 19%, 17%);
+$bg-color: hsl(0, 100%, 100%);
+$bg-3: hsl(225, 10%, 24%);
+$text-gray: hsl(215, 19%, 59%);
+$text-black1: hsl(220, 10%, 12%);
+$black-2: hsl(228, 95%, 7%);
+$white-color: #fff;
+$gray-e9: hsla(213, 33%, 94%, 1);
+$natural: hsl(217, 4%, 42%);
+$natural-1: hsl(0, 0%, 97%);
+$natural-2: hsl(210, 25%, 95%);
+$natural-4: hsl(0, 0%, 89%);
+$gray-neutral1: hsla(0, 0%, 99%, 1);
+$gray-2: hsla(235, 7%, 67%, 1);
+$gray-1: hsla(216, 3%, 38%, 1);
+$gray-4: hsla(245, 60%, 96%, 1);
+$orange-color: hsla(14, 100%, 82%, 1);
+$orange-color1: hsla(14, 100%, 65%, 1);
+$orange-color2: hsla(13, 100%, 96%, 1);
+$secondary-white: hsl(340, 100%, 91%);
+$bg-4:  hsl(205, 63%, 5%);
+$gray-3: hsl(215, 30%, 92%);
+$pink-color1: hsl(340, 100%, 98%);
+$pink-color2: hsl(341, 100%, 82%);
+$blue-color : hsl(203, 89%, 53%);
+$gradient1: linear-gradient( 92.29deg, #415EF4 0.33%, #7141EF 28.14% ); 
+
+:root {
+    --primary-h: 248;
+    --primary-s: 57%;
+    --primary-l: 60%;
+}

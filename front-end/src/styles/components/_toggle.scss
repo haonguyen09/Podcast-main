@@ -1,0 +1,28 @@
+@use '../abstracts' as abs;
+
+.toggle {
+    --background-color: #{abs.$gray-2};
+    @include abs.size(30px, 17px);
+    border-radius: 100rem;
+    background: var(--background-color);
+    padding: 1.5px 2px;
+    cursor: pointer;
+
+    &-spinner {
+        border-radius: 100rem;
+        background-color: abs.$white-color;
+        width: 14px;
+        aspect-ratio: 1;
+    }
+
+    &.active {
+        --background-color: #{abs.$gradient1};
+        background: var(--background-color);
+    
+        .toggle-spinner {
+            transform: translateX(12px);
+            transition: all 0.3s linear;
+        }
+    }
+}
+

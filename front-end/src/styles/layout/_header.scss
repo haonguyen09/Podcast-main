@@ -1,0 +1,80 @@
+@use '../abstracts' as abs;
+
+.search {
+    flex: 0 1 450px;
+
+}
+
+.header{
+    margin: 24px 60px;
+
+    &-input{
+        color: abs.$gray-2 !important;
+        font-size: 15px !important;
+        @include abs.fw('medium');
+        line-height: 22px !important;
+        padding: 12px 20px !important;
+
+        &::placeholder {
+            color: abs.$gray-2 !important;
+            @include abs.fw('medium');
+        }
+    }
+
+    &-right {
+        gap: 24px;
+    }
+
+    & > * {
+        flex-shrink: 0;
+    }
+
+    &-message, &-noti {
+        position: relative;
+    }
+
+    &-number {
+        position: absolute;
+        text-decoration: none;
+        color: red;
+        top: -7px;
+        right: 0;
+        @include abs.fw('bold');
+    }
+}
+
+
+.profile {
+    display: block;
+    @include abs.size(48px);
+    
+    img {
+        @include abs.imgRounded(100rem);
+    }
+}
+
+.button-upload {
+    height: 48px;
+    --p: 0 16px;
+    --gap: 6px;
+}
+
+.dropdown-toggle {
+    background-color: abs.$white-color !important;
+    border: none !important;
+}
+
+.dropdown-menu {
+    border: none !important;
+    margin-top: -27px !important;
+    inset: 0px -48px auto auto !important;
+}
+
+.dropdown-item {
+    text-align: center !important;
+    padding: 9px 10px !important;
+    background: abs.$secondary-color!important;
+    color: abs.$primary-color !important;
+    border-radius: 20px !important;
+    border: none !important;
+}

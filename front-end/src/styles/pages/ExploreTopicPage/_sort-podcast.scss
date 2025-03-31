@@ -1,0 +1,38 @@
+@use '../../abstracts' as abs;
+
+.sortP {
+
+    &-heading {
+        line-height: 24px;
+        @include abs.fs(22px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        --mb: 20px;
+    }
+
+    &-list {
+        gap: 20px;
+    }
+
+    &-item {
+        img {
+            @include abs.size(70px);
+            flex-shrink: 0;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+    }
+
+    &-info {
+        h4 {
+            line-height: 22px;
+            @include abs.fs('nm');
+            @include abs.fw('medium');
+            color: abs.$text-black1;
+        }
+
+        span {
+            @include abs.styleText()
+        }
+    }
+}

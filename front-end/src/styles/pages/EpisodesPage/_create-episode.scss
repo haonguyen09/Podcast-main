@@ -1,0 +1,126 @@
+@use '../../abstracts' as abs;
+
+.createEpisodes {
+
+
+
+    &-heading {
+        @include abs.styleHeading($fz: 22px, $lh: 24px , $mb: 40px);
+    }
+
+    &-thumbnail {
+
+        h4 {
+            @include abs.styleHeading($fz: 18px, $mb: 20px);
+        }
+    }
+
+    &-main {
+        @include abs.size( 639px, auto);
+        padding: 40px;
+        border: 1px solid abs.$natural-2;
+        box-shadow: -1px -3px 14px 0px rgba(227, 230, 236, 0.20), -10px 24px 35px 0px rgba(227, 230, 236, 0.25);
+        border-radius: 10px;
+    }
+
+    &-wrapper {
+        input {
+            display: none;
+        }
+    }
+
+    &-upload {
+        &-label {
+            padding-top: 10px;
+            @include abs.size(558px, 150px);
+            border-radius: 10px;
+            border: 1px solid #F4F4F4;
+            background: abs.$natural-1;
+            box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.25) inset;
+            margin-bottom: 22px;
+            cursor: pointer;
+
+            h4 {
+                @include abs.styleHeading($fz: 13px, $fw: 500, $lh: 18px, $mb: 5px);
+            }
+
+            span {
+                @include abs.styleText();
+                @include abs.fs(12px);
+            }
+        }
+
+
+    }
+
+    &-details {
+        h4 {
+            @include abs.styleHeading($fz: 18px, $mb: 20px);
+        }
+    }
+
+    &-title {
+        h5 {
+            @include abs.styleHeading($fz: 15px, $fw: 500, $lh: 22px, $mb: 12px);
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 12px;
+            background-color: abs.$natural-1;
+            border:  none;
+            width: 100%;
+        }
+    }
+
+    &-description {
+        h5 {
+            @include abs.styleHeading($fz: 14px, $lh: 24px, $mb: 14px);
+        }
+
+        textarea {
+            width: 100%;
+            border-radius: 12px;
+            background-color: abs.$natural-1;
+            border:  none;
+        }
+    }
+
+    &-wrapper-status {
+        margin-block: 44px;
+    }
+
+    &-status {
+
+        &-wrap {    
+            & > span {
+                @include abs.styleText();
+            }
+        }
+
+        &-list {
+            h4 {
+                @include abs.styleHeading($fz: 18px, $mb: 20px);
+            }
+
+            & > span {
+                @include abs.styleText();
+            }
+        }
+    }
+
+    &-topic {
+        h4 {
+            @include abs.styleHeading($fz: 18px, $mb: 20px);
+        }
+
+        &-select {
+            padding: 12px;
+            border-radius: 12px;
+            background-color: abs.$natural-1;
+            border:  none;
+            margin-bottom: 20px;
+        }
+    }
+
+}

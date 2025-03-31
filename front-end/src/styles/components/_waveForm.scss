@@ -1,0 +1,27 @@
+.waveform-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 15px;
+    padding-right: 40px;
+  }
+  
+  .waveform {
+    width: 90px; 
+    height: 20px; 
+
+    &>div:first-child{
+        display: none !important;
+    }
+
+    &-time {
+        margin: 0 0 0 5px !important;
+    }
+
+    .canvases canvas {
+        height: 20px !important;
+    }
+}
+
+.play-pause-btn {
+    background-color: #fff;
+}

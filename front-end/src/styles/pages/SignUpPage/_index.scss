@@ -1,0 +1,272 @@
+@forward './signUp-step2';
+@forward './signUp-step3';
+@forward './signUp-step4';
+@use '../../abstracts' as abs;
+
+
+.signUp {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+
+    &-logo {
+        margin-top: 70px;
+        display: block;
+    }
+
+    &-text {
+        @include abs.styleHeading($fz: 16px, $fw: 500, $lh: 24px, $color:abs.$gray-1);
+        display: block;
+        margin-block: 20px 16px;
+    }
+
+
+    &-listImg {
+        img {
+            @include abs.size(40px);
+            border-radius: 100rem;
+            background-color: abs.$pink-color2;
+            border: 2px solid abs.$white-color;
+        }
+        img:not(:first-child) {
+            margin-left: -12px;
+        }
+        margin-block: 20px;
+    }
+
+    h3 {
+        @include abs.styleHeading($fz: 24px);
+        margin-block: 20px;
+    }
+
+    &-listSocial{
+        gap: 10px;
+    }
+
+    &-separate {
+        @include abs.styleText();
+        margin-block: 20px;
+    }
+
+    &-buttonG {
+        padding-block: 13px;
+    }
+
+    &-email, &-password {
+        h4 {
+            @include abs.styleHeading($fz: 16px);
+            margin-bottom: 5px;
+        }
+
+        input {
+            border: none;
+            background-color: abs.$natural-1;
+            border-radius: 12px;
+            padding: 12px;
+        }
+    }
+
+    &-password {
+        margin-block: 25px;
+    }
+
+    &-btnT {
+        padding-inline: 45px;
+    }
+
+    &-right {
+
+        background-color: abs.$black-2;
+
+        &-h1 {
+            width: 400px;
+        }
+
+        &-button {
+            padding: 8px 16px;
+            background: abs.$gradient1;
+            color: abs.$white-color;
+            margin-block: 25px 30px;
+        }
+
+        &-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: flex-end;
+        z-index: 2;
+    
+            img {
+                border-radius: 10px;
+            }
+        }
+
+        &-img1 {
+            margin-right: 24px;
+        }
+
+        &-img2 {
+            margin-bottom: 10px;
+        }
+
+        &-wrapper3 {
+            position: relative;
+        }
+
+        &-img3 {
+            background-color: abs.$primary-color;
+            margin-top: 18px;
+        }
+
+        &-img5 {
+            position: absolute;
+            z-index: 1;
+        }
+
+        &-img6 {
+            position: absolute;
+            bottom: -18px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+
+        &-img4 {
+            background: abs.$pink-color2;
+            margin-left: 24px;
+            margin-bottom: 15%;
+        }
+    }
+
+    &-rightIn {
+        h1 {
+            margin-top: 83px;
+            @include abs.styleHeading($fz: 36px, $lh: 46px, $color: abs.$white-color);
+        }
+
+        &-text {
+            margin-block: 40px 21px;
+            @include abs.styleText();
+            span {
+                @include abs.styleText();
+                color: abs.$white-color;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &-s1 {
+
+        // &-main {
+        //     container-type: inline-size;
+        //     container-name: SignUp1;
+        // }
+
+        &-img {
+            margin-top: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid abs.$gray-2;
+        } 
+
+        &-header {
+            h3 {
+                @include abs.styleHeading();
+                margin-block: 42px  20px;
+
+                & > span {
+                    @include abs.styleText()
+                }
+            }
+
+            h4 {
+                @include abs.styleHeading();
+                margin-block: 40px 14px;
+            }
+
+        }
+
+        &-subtitle {
+            @include abs.styleHeading($fz: 16px, $fw: 500);
+                margin-bottom: 40px;
+                display: block;
+        }
+
+        &-lines {
+            div {
+                height: 12px;
+                border-radius: 10px;
+                width: 118px;
+                background-color: abs.$secondary-color;
+                
+
+                &:hover {
+                    background-color: abs.$primary-color;
+                    cursor: pointer;
+                }
+            }
+
+            div:not(:first-child) {
+                margin-left: 24px;
+            }
+
+            div.active {
+                width: 234px;
+                background-color: abs.$primary-color;
+            }
+        }
+
+        &-info {
+
+            grid-template-columns: repeat(2, 310px);
+            gap: 30px 40px;
+            margin-bottom: 33px;
+
+            h4 {
+                @include abs.styleHeading($fz: 16px, $fw: 500);
+                margin-bottom: 10px;
+            }
+
+            input:not(.signUp-s1-avatarInput) {
+                width: 308px;
+                border: 1px solid abs.$natural-4;
+                background-color: abs.$white-color;
+                padding: 12px 12px 12px 20px;
+                border-radius: 12px;
+            }
+        } 
+
+        &-avatar {
+            border: 1px solid abs.$natural-4;
+            background-color: abs.$white-color;
+            padding: 12px 12px 12px 20px;
+            border-radius: 12px;
+        }
+
+        &-avatarInput {
+            border: none;
+            padding: 12px 12px 12px 20px;
+        }
+
+        &-checkbox {
+            @include abs.styleHeading($fz: 16px, $fw: 500);
+            span{
+                color: abs.$primary-color;
+            }
+        }
+
+        &-button {
+            --p: 13px 16px;
+            margin-top: 33px;
+            min-width: 142px;
+        }
+
+        // @container SignUp1 (max-width: 768px) {
+        //     &-info {
+
+        //         grid-template-columns: 1fr;
+        //         gap: 30px;
+        //         margin-bottom: 24px;
+        //     }
+        // }
+    }
+    
+}

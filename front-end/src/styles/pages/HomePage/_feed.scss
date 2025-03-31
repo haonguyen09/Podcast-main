@@ -1,0 +1,177 @@
+@use "../../abstracts" as abs;
+
+.feed {
+
+    &-tab {
+        &-item {
+            
+            &-link {
+                border: none !important;
+                border-bottom: 2px solid abs.$bg-3 !important;
+                color: abs.$gray-1 !important;
+                @include abs.fs('sm');
+                @include abs.fw('bold');
+                line-height: 20px;
+
+                &.active {
+                    border-bottom: 2px solid abs.$primary-color !important;
+                    color: abs.$primary-color !important;
+                    transition: all 0.3s linear;
+                }
+            }
+
+
+        }
+
+    }
+
+    &-toggle {
+
+        border-bottom: 2px solid abs.$natural-2 !important;
+        padding: 8px 0px 4px 10px;
+        p {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+
+    &-main {
+        margin-top: 40px;    
+    }
+
+    &-item {
+        container-type: inline-size;
+        container-name: feedMain;
+        border-radius: 10px;
+        border: 1px solid abs.$natural-2;
+
+        &-header, &-content, &-footer {
+            padding: 20px;
+        }
+
+        &-content {
+            
+            flex-direction: row;
+            border-top: 1px solid abs.$natural-2;
+            border-bottom: 1px solid abs.$natural-2;
+        }
+    }
+
+    &-author {
+        gap: 16px;
+
+        &-verify {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        &-avatar {
+            @include abs.size(48px);
+            flex: 0 0 48px;
+            position: relative;
+
+            img{
+                @include abs.imgRounded(100rem)
+            }
+        }
+
+        &-name {
+            color: abs.$text-black1;
+            @include abs.fs('sm');
+            line-height: 20px;
+            margin: 0;
+            margin-right: 2px;
+        }
+
+        &-rating {
+            span {
+                @include abs.styleText();
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &-date {
+        @include abs.styleText();
+    }
+
+    &-podcast {
+        
+        &-img {
+            flex: 0 0 152px;
+            aspect-ratio: 1;
+            @include abs.imgRounded(10px);
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        &-header {
+            p {
+                @include abs.styleText();
+            }
+        }
+
+        &-info {
+            margin-left: 10px;
+
+            h3 {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                color: abs.$text-black1;
+                margin: 0;
+            }
+
+            p {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        &-time {
+            padding: 12px 0 16px;
+
+            p {
+                line-height: 19px; 
+                color: abs.$text-black1;
+                @include abs.fs(13px);
+            }
+        }
+
+        &-date, &-minus {
+            @include abs.styleText();
+        }
+
+        &-date {
+            margin-right: 10px;
+        }
+    }
+
+    &-footer {
+        &-action {
+            gap: 20px;
+        }
+    }
+
+    @container feedMain (max-width: 450px) {
+        &-item {
+            &-content {
+                flex-direction: column !important;
+            }
+        }
+    }
+}
+
+.page-link {
+    color: abs.$primary-color !important;
+}
+.active > .page-link {
+    color: abs.$white-color !important;
+    background-color: abs.$primary-color !important;
+}

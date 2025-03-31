@@ -1,0 +1,44 @@
+@use '../../abstracts' as abs;
+
+.host {
+    &-list {
+        gap: 20px;
+    }
+
+    &-item {
+        --gap: 6px;
+        --avatar-size: 44px;
+        gap: var(--gap);
+        @include abs.screenMinWidth(768px) {
+            --gap: 7px;
+            --avatar-size: 64px;
+        }
+    }
+
+    &-heading {
+        --mb: 20px;
+    }
+
+    &-avatar {
+        @include abs.size(var(--avatar-size));
+        @include abs.imgRounded(100rem);
+        overflow: hidden;
+        position: relative;
+        border: 1px solid abs.$orange-color;
+        box-shadow: 0 0 0 2px abs.$white-color, 0 0 0 3px abs.$orange-color;
+
+        img {
+            position: relative;
+            z-index: 2;
+            background-color: abs.$orange-color;
+            @include abs.imgRounded(100rem);
+        }
+    }
+
+    &-name {
+        @include abs.fs('sm');
+        line-height: 20px;
+        color: abs.$gray-1;
+    }
+}
+

@@ -1,0 +1,16 @@
+@use '../../abstracts' as abs;
+
+.current-play {
+    &-header {
+        margin-block: 30px 20px;
+    }
+
+    &-main {
+        @include abs.size(332px, 251px);
+        border-radius: 10px;
+
+        video {
+            @include abs.imgRounded(10px);
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use '../../abstracts' as abs;
+
+.suggest-follow {
+
+    &-header {
+        margin-block: 43px 18px;
+    }
+
+    &-item:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    &-author {
+        img {
+            flex: 0 0 46px;
+            height: 46px;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            border: 1px solid abs.$secondary-white;
+            box-shadow: 0 0 0 2px abs.$white-color, 0 0 0 3px abs.$secondary-white;
+            margin-right: 11px;
+        }
+
+        &-info {
+            h3{
+                @include abs.fw('medium');
+                @include abs.fs('nm');
+                line-height: 22px;
+                color: abs.$text-black1;
+                margin: 0;
+            }
+
+            span {
+                @include abs.styleText()
+            }
+
+        }
+    }
+}
+
+.button-follow {
+    padding: 6px 18px;
+}

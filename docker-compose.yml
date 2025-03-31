@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API=http://localhost:3005/api
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3005:3005"
+    volumes:
+      - backend-uploads:/app/uploads
+    environment:
+      - PORT=3005
+      - MONGO_DB=${MONGO_DB}
+      - ACCESS_TOKEN=${ACCESS_TOKEN}
+      - REFRESH_TOKEN=${REFRESH_TOKEN}
+  
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+volumes:
+  backend-uploads:

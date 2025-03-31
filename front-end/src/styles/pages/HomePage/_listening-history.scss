@@ -1,0 +1,47 @@
+@use '../../abstracts' as abs;
+
+.history {
+
+    &-header {
+        margin-block: 40px 18px;
+    }
+
+    &-item:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    &-link {
+        img {
+            @include abs.size(119px, 67px);
+            border-radius: 8px;
+            margin-right: 7px;
+        }
+
+    }
+
+    &-podcast-info {
+
+        h3{
+            @include abs.fw('medium');
+            @include abs.fs('nm');
+            line-height: 22px;
+            color: abs.$text-black1;
+            margin: 0;
+        }
+
+        span {
+            @include abs.styleText()
+        }
+
+    }
+
+    &-action-play, &-action-like {
+        margin-right: 16px;
+
+        span {
+            @include abs.fs(13px);
+            line-height: 19px; 
+            color: abs.$gray-2;
+        }
+    }
+}

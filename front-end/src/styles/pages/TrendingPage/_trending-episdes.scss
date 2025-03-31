@@ -1,0 +1,110 @@
+@use '../../abstracts' as abs;
+
+
+.trendingE {
+
+    container-type: inline-size;
+    container-name: trendingE;    
+
+    &-header {
+        margin-block: 42px;
+
+        span {
+            @include abs.styleText();
+        }
+    }
+
+    &-heading {
+        @include abs.fs(18px);
+        @include abs.fw('semibold');
+        color: abs.$text-black1;
+        line-height: 26px;
+        --mb: 8px;
+    }
+
+    &-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    &-item {
+        border-radius: 20px;
+        background-color: abs.$white-color;
+        box-shadow: -1px -3px 14px 0px rgba(227, 230, 236, 0.20), -10px 24px 35px 0px rgba(227, 230, 236, 0.25);
+    }
+
+    &-img {
+        @include abs.size(204px, 159px);
+        flex-shrink: 0;
+        margin: 14px 20px 28px;
+
+        img {
+            @include abs.imgRounded(12px)
+        }
+    }
+
+    &-info {
+
+        h4 {
+            @include abs.fs('lg');
+            @include abs.fw('medium');
+            color: abs.$text-black1;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        span {
+            @include abs.styleText();
+        }
+    }
+
+    &-played {
+        span:first-child {
+            margin-right: 16px;
+        }
+    }
+
+    &-author  {
+
+        margin-block: 20px 16px;
+
+        img {
+            flex: 0 0 36px;
+            width: 36px;
+            aspect-ratio: 1;
+            border-radius: 100rem;
+            margin-right: 12px;
+        }
+
+        &-info {
+            h5 {
+                @include abs.styleText();
+                color: abs.$text-black1;
+                margin: 0;
+            }
+
+        }
+        &-name {
+            @include abs.styleText();
+            @include abs.fs(13px);
+        }
+    }
+
+    &-audio-action > *{
+        margin-right: 9px;
+    }
+
+    &-btn-more {
+        margin-block: 50px;
+    }
+
+    @container trendingE (max-width: 768px) {
+        &-main {
+            grid-template-columns: 1fr;
+        }
+
+        &-item {
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+.history/
+# backend/src/uploads
+backend/node_modules/
+front-end/node_modules/
+.env/
